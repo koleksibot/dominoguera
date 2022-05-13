@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sample-prod:
+    container_name: sample-prod
+    build: .
+    ports:
+      - '80:80'
+  server:
+    container_name : server
+    build: ./email
+    ports:
+        - '8080:8080'
